@@ -86,7 +86,7 @@ public class AugmentEventHandler {
         });
 
         // 4. 아이템 우클릭: [4. 휴대용 제작·화롯대]
-        UseItemCallback.REGISTER.register((player, world, hand) -> {
+        UseItemCallback.EVENT.register((player, world, hand) -> {
             ItemStack stack = player.getStackInHand(hand);
             if (AugmentItemHelper.isPortableStation(stack)) {
                 if (!world.isClient && player instanceof ServerPlayerEntity serverPlayer) {
